@@ -1,6 +1,8 @@
 <section>
-<h1>Home </h1>
+	<h1>Home </h1>
 </section>
-<sidebar ng-repeat="room in home.roomList">
-{{ room.$value}}
-</sidebar> 
+<ul>
+	<li ng-repeat="room in home.roomList">
+		{{ room.name }}
+	</li> 
+</ul>
