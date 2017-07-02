@@ -1,6 +1,11 @@
 <section>
 	<h1>Home </h1>
 </section>
+<div ng-controller="RoomCtrl as newRoom">
+    	<button type="button" class="btn btn-default" ng-click="newRoom.open()">Open me!</button>
+</div>
+
+
 <ul>
 	<li ng-repeat="room in home.roomList">
 		{{ room.name }}
