@@ -1,3 +1,7 @@
 body {
 	color:black;
 }
+
+#messages div:nth-child(even) {
+	background: #CCC;
+}

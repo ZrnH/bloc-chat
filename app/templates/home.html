@@ -8,23 +8,18 @@
 
 <ul>
 	<li ng-repeat="room in home.roomList">
-		<a ui-sref="rooms" ng-click="">{{ room.name }}</a>
+		<a ng-click="home.selectRoom(room)">{{ room.name }}</a>
 	</li> 
 </ul>
 
-<section>
-<title>{{room.name}}</title>
-<table>
-	<tr ng-repeat="message in home.messages">
-		<td class="username">
-			<!-- username tag -->
-		</td>
-		<td class="room-view-message-body">
-				<!-- message body -->
-		</td>
-		<td class="room-view-timestamp">
-				<!-- timestamp tag -->
-		</td>
-	</tr>
-</table>
+<section id="messages">
+<h2>{{home.currentRoom.name}}</h2>
+	<div ng-repeat="message in home.messages" class="message">
+		<span class="username">
+			<strong>{{message.username}}:</strong> {{message.content}}
+		</span>
+		<span class="room-view-timestamp pull-right">
+			{{message.sentAt}}
+		</span>
+	</div>
 </section>

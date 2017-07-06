@@ -8,8 +8,16 @@
 			});
 		}
 
-		this.message = Message.messages;
+		this.messages = null;
+		this.currentRoom = null;
+		this.selectRoom = function(room){
+			this.currentRoom = room;
+			this.messages = Message.getByRoomId(room.$id);
+		}
 	}
+
+	// need function to select a current room
+
 
 	angular
 		.module('blocChat')
