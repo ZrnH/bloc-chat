@@ -16,8 +16,6 @@
 		}
 	}
 
-	// need function to select a current room
-
 
 	angular
 		.module('blocChat')

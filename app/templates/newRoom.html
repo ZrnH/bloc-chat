@@ -1,11 +1,13 @@
 <div>
     <div class="modal-header">
-        <h3 class="modal-title" id="modal-title">I'm a modal!</h3>        
+        <h3 class="modal-title" id="modal-title">Create a new room</h3>
+        <h6 class="modal-title" id="modal-title">Have private or group message threads with your peers</h6>        
     </div>
-    <div class="modal-body" id="modal-body">
-     <label>Name: <input type="text" ng-model="addRoom.newRoom"/></label>
 
+    <div class="modal-body" id="modal-body">
+        <label>Name: <input type="text" ng-model="addRoom.newRoom"/></label>
     </div>
+
     <div class="modal-footer">
         <button class="btn btn-primary" type="button" ng-click="addRoom.ok()">OK</button>
         <button class="btn btn-warning" type="button" ng-click="addRoom.cancel()">Cancel</button>
