@@ -1,7 +1,7 @@
 (function (){
-	function NewUserCtrl(BlocChatCookies, $cookies, $uibModalInstance){
+	function NewUserCtrl($cookies, $uibModalInstance){
 			this.username = null;
-			
+
 			this.ok = function(){
 				if(this.username){
 					$cookies.put('blocChatCurrentUser', this.username);
@@ -12,5 +12,5 @@
 	
 	angular
 		.module('blocChat')
-		.controller('NewUserCtrl', ['BlocChatCookies', '$cookies', '$uibModalInstance', NewUserCtrl]);
+		.controller('NewUserCtrl', ['$cookies', '$uibModalInstance', NewUserCtrl]);
 })();
