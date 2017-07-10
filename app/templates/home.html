@@ -12,14 +12,18 @@
 	</li> 
 </ul>
 
-<section id="messages">
+<section id="messages" ng-hide="!home.currentRoom">
 <h2>{{home.currentRoom.name}}</h2>
 	<div ng-repeat="message in home.messages" class="message">
 		<span class="username">
 			<strong>{{message.username}}:</strong> {{message.content}}
 		</span>
 		<span class="room-view-timestamp pull-right">
-			{{message.sentAt}}
+			{{message.sentAt | date:"MM/dd/yyyy 'at' h:mma"}}
 		</span>
 	</div>
+	<form ng-submit="home.sendMessage()">
+		<input type="text" ng-model="home.newMessage">
+	</form>
+	
 </section>
